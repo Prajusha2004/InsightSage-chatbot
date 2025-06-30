@@ -22,9 +22,9 @@ export const ChatHeader: React.FC<ChatHeaderProps> = ({
         <div className="flex items-center space-x-4">
           <div className="bg-white/20 p-2 rounded-lg backdrop-blur-sm">
             <img 
-              src="/public/Screenshot_2025-06-30_201243-removebg-preview.png" 
+              src="/logo.png" 
               alt="InsightSage Logo" 
-              className="w-8 h-8 object-contain"
+              style={{ height: "60px" }}
             />
           </div>
           <div>
@@ -34,7 +34,6 @@ export const ChatHeader: React.FC<ChatHeaderProps> = ({
             </p>
           </div>
         </div>
-        
         <div className="flex items-center space-x-2">
           <button
             onClick={onToggleTheme}
@@ -43,7 +42,6 @@ export const ChatHeader: React.FC<ChatHeaderProps> = ({
           >
             {isDarkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
           </button>
-          
           <button
             onClick={onExportChat}
             disabled={messageCount === 0}
@@ -52,7 +50,6 @@ export const ChatHeader: React.FC<ChatHeaderProps> = ({
           >
             <Download className="w-4 h-4" />
           </button>
-          
           <button
             onClick={onClearChat}
             disabled={messageCount === 0}
